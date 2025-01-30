@@ -85,23 +85,28 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Tugas2Theme {
-                Scaffold(modifier = Modifier.fillMaxSize() , topBar = {
-                TopAppBar(
-                    modifier = Modifier.padding(top = 16.dp),
-                    title = {
-                        Box(
-                            modifier = Modifier.fillMaxWidth(),
-                            contentAlignment = Alignment.Center,
-                        ) {
-                            Text(text = "Students List")
-                        }
-                    },
-                    colors= TopAppBarDefaults.mediumTopAppBarColors(
-                        containerColor = Color(0xFFADD8E6),
-                        titleContentColor = Color.Black,
-                    )
+                Scaffold(
+                    modifier = Modifier.fillMaxSize() ,
+                    topBar = {
+                        TopAppBar(
+                            modifier = Modifier.padding(top = 16.dp),
+                            title = {
+                                Box(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    contentAlignment = Alignment.Center,
+                                ){
+                                    Text(
+                                        text = "Students List"
+                                    )
+                                }
+                            },
+                            colors= TopAppBarDefaults.mediumTopAppBarColors(
+                                containerColor = Color(0xFFADD8E6),
+                                titleContentColor = Color.Black,
+                            )
+                        )
+                    }
                 )
-            })
                 { innerPadding ->
                     Column(
                         modifier = Modifier
